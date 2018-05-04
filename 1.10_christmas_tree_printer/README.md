@@ -1,3 +1,23 @@
-# 1.10 Number printer
+# 1.10 Christmas Tree printer
 
-Write a program that prompts for a 5 digit number then prints each digit of the number on a separate line.
+Write a program to print a christmas tree shape using asterisks.
+
+e.g.
+
+```
+        *
+       ***
+      *****  
+       ***
+      *****
+     *******
+    *********
+     *******
+    *********
+   ***********
+  *************
+       ***
+       ***
+       ***
+```
+             
