@@ -17,8 +17,8 @@ public class Insertion {
             int i = j - 1;
             int temp = a[j];
             while (i > 0 && a[i] > temp) {
-            a[i + 1] = a[i];
-            i--;
+                a[i + 1] = a[i];
+                i--;
             }
             a[i + 1] = temp;
         }
