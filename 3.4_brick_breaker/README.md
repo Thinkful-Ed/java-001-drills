@@ -1,0 +1,8 @@
+# 3.4 Brick breaker
+
+Consider the following scenario: 
+You have been asked to build a version of the famous Brick Breaker game. Here is a link to one example on the Google Play store: https://play.google.com/store/apps/details?id=com.lt.latte.brick, or search the app store for similar games. The game consist of a set of bricks forming a wall at the top of the screen. The player possesses a ball and a paddle. The paddle moves horizontally across the bottom of the screen. The player bounces the ball on the paddle by positioning the paddle in the path of the ball and attempts to hit the bricks with the ball. When a brick is hit it disappears from the screen. Some bricks are special and give the player extra points or extra chances (lives). Play ends when all the bricks are broken or the player misses the ball. The player may have three chances initially.
+
+From the scenario and your general knowledge of how this game may be played list a set of objects that would be necessary to build this game. For each object that you identify think of the attributes that would be necessary for that object and think of the methods that may be needed. Write down these details and draw a class diagram with a class for each type of object that you think of.  
+
+Implement and write each class that you designed and write a set of tests for each class. Note that you are not trying to write a game just a set of classes that may be used to build the game later.
