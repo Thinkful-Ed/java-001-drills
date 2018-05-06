@@ -8,16 +8,41 @@ public class NumberPrinterSolution {
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter a five digit number: ");
-    String number = scanner.next();
+    Integer number = scanner.nextInt();
+    Integer numberCopy = number;
 
-    if (number.length() != 5) {
+    if (number.toString().length() != 5) {
       System.out.println("Exception: please enter a five digit number!");
     } else {
-      System.out.println(number.charAt(0));
-      System.out.println(number.charAt(1));
-      System.out.println(number.charAt(2));
-      System.out.println(number.charAt(3));
-      System.out.println(number.charAt(4));
+
+      /**
+       * Non-loop way.
+       */
+      int remainder = number % 10;
+      number = number / 10;
+      System.out.println(remainder);
+      remainder = number % 10;
+      number = number / 10;
+      System.out.println(remainder);
+      remainder = number % 10;
+      number = number / 10;
+      System.out.println(remainder);
+      remainder = number % 10;
+      number = number / 10;
+      System.out.println(remainder);
+      remainder = number % 10;
+      System.out.println(remainder);
+
+      /**
+       * While loop way.
+       */
+
+      while (numberCopy > 0) {
+        int rem = numberCopy % 10;
+        numberCopy = numberCopy / 10;
+        System.out.println(rem);
+      }
+
     }
   }
 }

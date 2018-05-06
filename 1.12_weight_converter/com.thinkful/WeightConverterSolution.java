@@ -8,10 +8,10 @@ public class WeightConverterSolution {
 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Please enter weight in pounds: ");
-    String weightInPounds = scanner.next();
+    Double weightInPounds = scanner.nextDouble();
 
     //0.453592 kg = 1 lbs or 2.2046226218 lbs = 1 kg
-    System.out.println(Double.valueOf(Integer.parseInt(weightInPounds) / 2.2046226218));
+    System.out.println(weightInPounds / 2.2046226218);
   }
 
 }
