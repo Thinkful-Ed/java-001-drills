@@ -18,7 +18,7 @@ public class SayHelloSolution {
 
         2. Change the word “public” on line 3 to “Public”.
 
-          - compile time - invalid syntax
+          - compile time - invalid syntax because the keyword must be "public"
 
         3. Change the word “Hello” on line 8 to “hello”.
 
