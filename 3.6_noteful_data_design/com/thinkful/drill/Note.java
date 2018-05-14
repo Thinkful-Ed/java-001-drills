@@ -1,5 +1,8 @@
 package com.thinkful.drill;
 
+import java.util.Date;
+import java.util.List;
+
 public class Note {
 
   private int id;
@@ -7,8 +10,15 @@ public class Note {
   private Date created;
   private Date updated;
   private int userId;
-  private List<Tage> tags;
+  private List<Tag> tags;
   private int folderId;
+
+  public Note(int id, String message, int userId) {
+    this.id = id;
+    this.message = message;
+    this.created = new Date();
+    this.userId = userId;
+  }
 
   public int getId() {
     return id;
@@ -50,11 +60,11 @@ public class Note {
     this.userId = userId;
   }
 
-  public List<Tage> getTags() {
+  public List<Tag> getTags() {
     return tags;
   }
 
-  public void setTags(List<Tage> tags) {
+  public void setTags(List<Tag> tags) {
     this.tags = tags;
   }
 
