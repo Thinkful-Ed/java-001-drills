@@ -1,6 +1,15 @@
 # 4.5 DRY up with inheritance
 
+Clone this repository and navigate to the drill 4.5 folder. 
 
-WORK IN PROGRESS!!!
+```bash
+  cd 4.5_dry_up_with_inheritance
+```
 
-Clone the following repository [link to a Github repo, possible game characters and weapons]. It contains several classes that are fully implemented. However, there is some duplication of code involved. refactor the code using inheritance and composition to avoid duplication of code where possible. Write test cases for all the classes.
+This folder contains several classes found in the __src__ directory that are fully implemented . However,there is some duplication of code involved. Refactor the code using inheritance and composition to avoid duplication of code where possible. Update the tests to consider your new design where necessary.
+
+To run the tests
+
+```bash
+gradle test
+```
