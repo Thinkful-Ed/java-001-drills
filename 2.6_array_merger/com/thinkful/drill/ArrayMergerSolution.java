@@ -2,6 +2,7 @@ package com.thinkful.drill;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,23 +29,60 @@ public class ArrayMergerSolution {
     Arrays.sort(secondArray);
 
     /**
-     *  Way #1: Create a String and sort the resulting combined Array
+     * Way #1: Simple Linear Array Merge Sort
      */
 
-    String[] stringResultArray = (firstArrayAsString + "," + secondArrayAsString).split(",");
-    Arrays.sort(stringResultArray);
+    List<Integer> resultOne = new ArrayList<>();
+    int i = 0, j = 0,
+        maxFirstIndex = firstArray.length - 1,
+        maxSecondIndex = secondArray.length - 1;
 
-    System.out.println(Arrays.toString(stringResultArray));
+    List<String> tempList = new ArrayList<String>(Arrays.asList(firstArray));
+    tempList.addAll(Arrays.asList(secondArray));
+
+    do {
+
+      Integer a = Integer.parseInt(firstArray[i]);
+      Integer b = Integer.parseInt(secondArray[j]);
+
+      if (a > b || a.equals(b)) {
+        if (tempList.indexOf(b.toString()) != -1) {
+          resultOne.add(b);
+          tempList.remove(b.toString());
+          if (j < maxSecondIndex) j++;
+        } else if (tempList.indexOf(a.toString()) != -1) {
+          resultOne.add(a);
+          tempList.remove(a.toString());
+          if (i < maxFirstIndex) i++;
+        }
+      } else {
+        if (tempList.indexOf(a.toString()) != -1) {
+          resultOne.add(a);
+          tempList.remove(a.toString());
+          if (i < maxFirstIndex) i++;
+        } else if (tempList.indexOf(b.toString()) != -1) {
+          resultOne.add(b);
+          tempList.remove(b.toString());
+          if (j < maxSecondIndex) j++;
+        }
+      }
+
+    } while (resultOne.size() < maxFirstIndex + maxSecondIndex + 2);
+    System.out.println(resultOne.toString());
 
     /**
-     *  Way #2: Using Lists
+     * Way #2: A last example using comparators!
      */
 
-    List tempList = new ArrayList(Arrays.asList(firstArray));
-    tempList.addAll(Arrays.asList(secondArray));
-    Object[] listResultArray = tempList.toArray();
-    Arrays.sort(listResultArray);
-    System.out.println(Arrays.toString(listResultArray));
+    List<Integer> resultTwo = new ArrayList<>();
+    for (String a : firstArray) {
+      resultTwo.add(Integer.parseInt(a));
+    }
+    for (String b : secondArray) {
+      resultTwo.add(Integer.parseInt(b));
+    }
+    Collections.sort(resultTwo);
+    System.out.println(resultTwo.toString());
 
   }
 }

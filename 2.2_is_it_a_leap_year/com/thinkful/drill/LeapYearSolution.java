@@ -10,11 +10,15 @@ public class LeapYearSolution {
     System.out.println("Please enter the year: ");
     Integer year = scanner.nextInt();
 
-    String isLeapYear = "is not";
+    if (year > 1581 ) {
 
-    if (year % 4 == 0 && year % 100 != 0 || year % 400 ==0) isLeapYear = "is";
+      String isLeapYear = "is not";
+      if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) isLeapYear = "is";
+      System.out.printf("%d %s a leap year", year, isLeapYear);
 
-    System.out.printf("%d %s a leap year", year, isLeapYear);
+    } else {
+      System.out.println("Please supply a date after the start of the Gregorian calendar in year 1582!");
+    }
 
   }
 }

@@ -12,18 +12,21 @@ public class MoarLeapYearSolution {
 
       System.out.println("Please enter the year: ");
       Integer year = scanner.nextInt();
-      String isLeapYear = "is not";
 
-      if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-        isLeapYear = "is";
+      if (year > 1581) {
+
+        String isLeapYear = "is not";
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) isLeapYear = "is";
+        System.out.printf("%d %s a leap year \n", year, isLeapYear);
+
+      } else {
+        System.out.println("Please supply a date after the start of the Gregorian calendar in year 1582!");
       }
-
-      System.out.printf("%d %s a leap year \n", year, isLeapYear);
 
       System.out.println("Continue (y/n)?: ");
       oneMoreTime = scanner.next();
 
-    } while (oneMoreTime.equals("y") || oneMoreTime.equals("yes") );
+    } while (oneMoreTime.equals("y") || oneMoreTime.equals("yes"));
 
   }
 }

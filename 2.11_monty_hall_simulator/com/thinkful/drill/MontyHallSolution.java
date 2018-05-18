@@ -35,8 +35,10 @@ public class MontyHallSolution {
       trials--;
     } while (trials > 0);
 
-    System.out.printf("%d trials completed - the player got the answer correct %d many times %s \n",
-        originalTrials, playerCorrect, (switched) ? "switching doors" : "not switching doors");
+    double percent = (double)playerCorrect / (double) originalTrials * 100;
+
+    System.out.printf("%d trials completed - the player got the answer correct %f percent of the time %s \n",
+        originalTrials, percent, (switched) ? "switching doors" : "not switching doors");
   }
 
   public static void main(String[] args) {
