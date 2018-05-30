@@ -1,11 +1,6 @@
 package com.thinkful.drills;
 
-public class Hammer {
-  private int strength;
-  private int damage;
-  private double cost;
-  private double weight;
-  private String name;
+public class Hammer extends Weapon {
   private double throwingDistance;
 
   public static final double DEFAULT_THROWING_DISTANCE = 25.0;
@@ -62,52 +57,8 @@ public class Hammer {
         double weight, 
         double cost, 
         double throwingDistance) {
-    this.setName(name);
-    this.setDamage(damage);
-    this.setStrength(strength);
-    this.setWeight(weight);
-    this.setCost(cost);
+    super(name, damage, strength, weight, cost);
     this.setThrowingDistance(throwingDistance);
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return this.name;
-  }
-
-  public void setDamage(int damage) {
-    this.damage = damage;
-  }
-
-  public int getDamage() {
-    return this.damage;
-  }
-
-  public void setStrength(int strength) {
-    this.strength = strength;
-  }
-
-  public int getStrength() {
-    return this.strength;
-  }
-
-  public void setWeight(double weight) {
-    this.weight = weight;
-  }
-
-  public double getWeight() {
-    return this.weight;
-  }
-
-  public void setCost(double cost) {
-    this.cost = cost;
-  }
-
-  public double getCost() {
-    return this.cost;
   }
 
   public void setThrowingDistance(double throwingDistance) {
@@ -116,19 +67,5 @@ public class Hammer {
 
   public double getThrowingDistance() {
     return this.throwingDistance;
-  }
-
-  /**
-   * Performs a Hammer attack on a Wizard.
-   */
-  public void attack(Wizard wizard) {
-    wizard.hit(this.getDamage());
-  }
-
-  /**
-   *  Perform a Hammer attack on a dwarf
-   */
-  public void attack(Dwarf dwarf) {
-    dwarf.hit(this.getDamage());
   }
 }

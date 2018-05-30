@@ -1,10 +1,6 @@
 package com.thinkful.drills;
 
-public class Dwarf {
-  private String name;
-  private String description;
-  private int health;
-  private double strength;
+public class Dwarf extends Character {
   private double jumpHeight;
   
   public static final int INITIAL_HEALTH = 75;
@@ -50,43 +46,8 @@ public class Dwarf {
    * Create a new Dwarf with given values.
    */
   public Dwarf(String name, String description, int health, double strength, double jumpHeight) {
-    this.setName(name);
-    this.setHealth(health);
-    this.setStrength(strength);
-    this.setDescription(description);
+    super(name, description, health, strength);
     this.setJumpHeight(jumpHeight);
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return this.name;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public String getDescription() {
-    return this.description;
-  }
-
-  public void setHealth(int health) {
-    this.health = health;
-  }
-
-  public int getHealth() {
-    return this.health;
-  }
-
-  public void setStrength(double strength) {
-    this.strength = strength;
-  }
-
-  public double getStrength() {
-    return this.strength;
   }
 
   public void setJumpHeight(double jumpHeight) {
@@ -95,17 +56,6 @@ public class Dwarf {
 
   public double getJumpHeight() {
     return this.jumpHeight;
-  }
-
-  /**
-   * Apply a hit to this character.
-   * A hit subtracts powerOfHit from the total health of
-   * the character. If health drops below 0 it is reset to 0.
-   * 
-   * @param powerOfHit int The amount of damage that is done to the character
-   */
-  public void hit(int powerOfHit) {
-    this.setHealth(Math.max(this.getHealth() - powerOfHit, 0));
   }
 
 }
