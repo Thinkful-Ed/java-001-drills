@@ -5,9 +5,11 @@ public class Dwarf {
   private String description;
   private int health;
   private double strength;
+  private double jumpHeight;
   
   public static final int INITIAL_HEALTH = 75;
   public static final double INITIAL_STRENGTH = 50.0;
+  public static final double INITIAL_JUMP = 25.0;
 
   /**
    * Create a new Dwarf with default values.
@@ -27,25 +29,32 @@ public class Dwarf {
    * Create a new Dwarf with name, description and default values.
    */
   public Dwarf(String name, String description) {
-    this(name, INITIAL_HEALTH);
-    this.setDescription(description);
+    this(name, description, INITIAL_HEALTH);
   }
 
   /**
    * Create a new Dwarf with name, health and default values.
    */
-  public Dwarf(String name, int health) {
-    this(name, health, INITIAL_STRENGTH);
+  public Dwarf(String name, String description, int health) {
+    this(name, description, health, INITIAL_STRENGTH);
   }
 
   /**
    * Create a new Dwarf with given values.
    */
-  public Dwarf(String name, int health, double strength) {
+  public Dwarf(String name, String description, int health, double strength) {
+    this(name, description, health, strength, INITIAL_JUMP);
+  }
+
+  /**
+   * Create a new Dwarf with given values.
+   */
+  public Dwarf(String name, String description, int health, double strength, double jumpHeight) {
     this.setName(name);
     this.setHealth(health);
     this.setStrength(strength);
-    this.setDescription("");
+    this.setDescription(description);
+    this.setJumpHeight(jumpHeight);
   }
 
   public void setName(String name) {
@@ -78,6 +87,14 @@ public class Dwarf {
 
   public double getStrength() {
     return this.strength;
+  }
+
+  public void setJumpHeight(double jumpHeight) {
+    this.jumpHeight = jumpHeight;
+  }
+
+  public double getJumpHeight() {
+    return this.jumpHeight;
   }
 
   /**

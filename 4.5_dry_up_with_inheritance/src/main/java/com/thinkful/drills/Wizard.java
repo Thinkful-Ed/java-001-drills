@@ -5,9 +5,11 @@ public class Wizard {
   private String description;
   private int health;
   private double strength;
+  private double magicRating;
   
   public static final int INITIAL_HEALTH = 100;
   public static final double INITIAL_STRENGTH = 100.0;
+  public static final double INITIAL_MAGIC_RATING = 0;
 
   /**
    * Create a Wizard with all default values.
@@ -27,25 +29,32 @@ public class Wizard {
    * Create a Wizard with name, description and default values.
    */
   public Wizard(String name, String description) {
-    this(name, INITIAL_HEALTH);
-    this.setDescription(description);
+    this(name, description, INITIAL_HEALTH);
   }
 
   /**
-   * Create a Wizard with name, health and default values.
+   * Create a Wizard with name, description, health and default values.
    */
-  public Wizard(String name, int health) {
-    this(name, health, INITIAL_STRENGTH);
+  public Wizard(String name, String description, int health) {
+    this(name, description, health, INITIAL_STRENGTH);
   }
 
   /**
-   * Create a Wizard with name, health, strength and default values.
+   * Create a Wizard with name, description, health, strength and default values.
    */
-  public Wizard(String name, int health, double strength) {
+  public Wizard(String name, String description, int health, double strength) {
+    this(name, description, health, strength, INITIAL_MAGIC_RATING);
+  }
+
+  /**
+   * Create a Wizard with name, description, health, strength and default values.
+   */
+  public Wizard(String name, String description, int health, double strength, double magicRating) {
     this.setName(name);
     this.setHealth(health);
     this.setStrength(strength);
-    this.setDescription("");
+    this.setDescription(description);
+    this.setMagicRating(magicRating);
   }
 
   public void setName(String name) {
@@ -78,6 +87,14 @@ public class Wizard {
 
   public double getStrength() {
     return this.strength;
+  }
+
+  public void setMagicRating(double magicRating) {
+    this.magicRating = magicRating;
+  }
+
+  public double getMagicRating() {
+    return this.magicRating;
   }
 
   /**
