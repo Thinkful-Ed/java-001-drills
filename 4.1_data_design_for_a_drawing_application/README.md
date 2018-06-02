@@ -1,0 +1,3 @@
+# 4.1 Data design for a drawing application
+
+Consider the following scenario: You have been assigned to the development team responsible for developing a drawing application similar to Adobe’s Illustrator. Users of the application should be able to select a number of drawing tools  such as pens or paint brushes and modify their sizes. They should also be able to select predefined shapes such as circles, rectangles and octagons and place them on a page and modify their dimensions. Identify the potential objects in the scenario and design a set of classes to represent those objects. Implement and test the design. Note that you are only implementing the classes you identify to support the application, you are not asked to create an actual drawing application.
