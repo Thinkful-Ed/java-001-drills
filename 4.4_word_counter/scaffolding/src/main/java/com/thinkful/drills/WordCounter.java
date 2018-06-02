@@ -20,7 +20,29 @@ public class WordCounter {
    * @param text String The String to be counted 
    */
   public int countWords(String text) {
-    return text.split("\\W+").length;
+    int count = 0;
+    boolean inWord = false;
+    for (int i = 0; i < text.length(); i++) {
+      char c = text.charAt(i);
+      boolean isAlphaNum = Character.isAlphabetic(c) 
+            || Character.isDigit(c)
+            || c == '\'';
+      if (inWord) {
+        if (!isAlphaNum) {
+          count++;
+          inWord = false;
+        }
+      } else {
+        inWord = isAlphaNum;
+      }
+    }
+
+    //ensure you count the last word
+    if (inWord) {
+      count++;
+    }
+
+    return count;
   }
 
   /**

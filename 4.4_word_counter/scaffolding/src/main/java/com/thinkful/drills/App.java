@@ -1,4 +1,4 @@
-import com.thinkful.drills.WordCounter;
+package com.thinkful.drills;
 
 public class App {
 
