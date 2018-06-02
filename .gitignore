@@ -1,5 +1,7 @@
-/**/.gradle/
+**/.gradle/
 **/build/
 **/bin/
 **/.sts4-cache
 **/.settings
+**/.vscode/
+**/*.class
