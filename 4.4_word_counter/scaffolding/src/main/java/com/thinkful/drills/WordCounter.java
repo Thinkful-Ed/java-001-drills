@@ -20,8 +20,7 @@ public class WordCounter {
    * @param text String The String to be counted 
    */
   public int countWords(String text) {
-    /* Write your code here */
-    return 0;
+    return text.split("\\W+").length;
   }
 
   /**

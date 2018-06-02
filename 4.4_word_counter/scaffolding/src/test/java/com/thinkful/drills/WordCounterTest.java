@@ -6,6 +6,9 @@ public class WordCounterTest {
 
   @Test
   public void testCountWords() {
-    // Write your test code here
+    String filename = "PATH_TO\\words.txt";
+    WordCounter counter = new WordCounter();
+    counter.go(filename);
+    assertEquals( counter.go(filename), 26);
   }
 }
