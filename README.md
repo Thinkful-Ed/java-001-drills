@@ -10,6 +10,22 @@ The `master` branch of this repository contains a folder for each drill in the c
 
 In the `solutions` branch of this repository, you'll find example solutions for each drill. As a learner, you're on the honor system here: we ask that you hold off on looking at any solutions until you've put in a good faith effort at coming up with your own solution.
 
+Navigate to folder - e.g.:
+
+```bash
+	cd 1.1_declaring_and_printing_variables
+```
+
+To compile:
+```bash
+	javac com/thinkful/drills/DeclareAndPrintSolution.java
+```
+
+To run:
+```bash
+	java com.thinkful.drills.DeclareAndPrintSolution
+```
+
 ## For curriculum contributors
 
 If you're a contributor to this project, here's what you need to know:
