@@ -1,39 +1,50 @@
 package com.thinkful.drill;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class PasswordGeneratorSolution {
 
   public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
+    Random ran = new Random();
 
-    System.out.println("Please enter a password: ");
-    String password = scanner.next();
-    String valid = "INVALID";
+    //get a randomly generated length between 6 and 70 inclusively
+    int length = ran.nextInt(70 - 6) + 6;
 
-    boolean validLength = password.length() > 5 && password.length() < 21;
-    boolean hasLowerCase = false;
-    boolean hasUpperCase  = false;
-    boolean hasDigit  = false;
-    boolean hasPunc  = false;
+    char[] chars = new char[length];
 
-    final String lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    final String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    final String digits = "1234567890";
-    final String punc = "!`~@#$%*+_\\-^&{[}]=|(.?:;\"')/";
+    //ensure we get at least one upper case letter
+    char upper = (char)(ran.nextInt(90 - 65) + 65);
+    chars[0] = upper;
 
-    for (int i = 0; i < password.length(); i++) {
-      if (lowerCase.indexOf(password.charAt(i)) != -1) hasLowerCase = true;
-      if (upperCase.indexOf(password.charAt(i)) != -1) hasUpperCase = true;
-      if (digits.indexOf(password.charAt(i)) != -1) hasDigit = true;
-      if (punc.indexOf(password.charAt(i)) != -1) hasPunc = true;
+    //ensure we get at least one lower case letter
+    char lower = (char)(ran.nextInt(122 - 97) + 97);
+    chars[1] = lower;
+
+    //ensure we get at least one punctuation
+    final String puncs = "!`~@#$%*+_\\-^&{[}]=|(.?:;\"')/";
+    char punc = puncs.charAt(ran.nextInt(puncs.length()));
+    chars[2] = punc;
+
+    //ensure we get at least one digit
+    char digit = (char)(ran.nextInt(57 - 48) + 48);
+    chars[3] = digit;
+
+    //randomly generate the rest of the password
+    for (int i = 4; i < length; i++) {
+      chars[i]  = (char)(ran.nextInt(126 - 33) + 33);
+    }
+   
+    //finally shuffle the first 4 chars into the array to ensure their
+    //positions are random.
+    for (int i = 0; i <= 3; i++) {
+      int randomIndex = ran.nextInt(length);
+      char temp =  chars[i];
+      chars[i] = chars[randomIndex];
+      chars[randomIndex] = temp;
     }
 
-    if (validLength && hasLowerCase && hasUpperCase && hasDigit && hasPunc) valid = "VALID";
-
-    System.out.println(validLength + " " + hasLowerCase  + " " +  hasUpperCase  + " " +  hasDigit  + " " + hasPunc);
-    System.out.printf("Your password is %s", valid);
+    System.out.printf("Your password is: %s\n", new String(chars));
   }
 
 }
