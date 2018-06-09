@@ -3,3 +3,5 @@
 **/bin/
 **/.sts4-cache
 **/.settings
+**/.vscode/
+**/*.class
