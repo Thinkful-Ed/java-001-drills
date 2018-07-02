@@ -1,4 +1,4 @@
-# 2.9 Pig Latin generator
+# Pig Latin generator
 
 Write a program that accepts a word and translates it into its pig latin equivalent. 
 

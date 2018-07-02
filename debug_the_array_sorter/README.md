@@ -1,4 +1,4 @@
-# 2.13 Debug the array sorter
+# Debug the array sorter
 
 Consider the following program written by a novice programmer that sorts an array of integers:
 

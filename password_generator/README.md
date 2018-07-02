@@ -1,4 +1,4 @@
-# 2.7 Password generator
+# Password generator
 
 Write a program that generates a password using a combination of letters, digits and punctuations. A password must follow these rules:
 

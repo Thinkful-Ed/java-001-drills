@@ -1,4 +1,4 @@
-# 4.4 Word counter
+# Word counter
 
 Consider the Java program found in the scaffolding folder in this directory.
 

@@ -1,4 +1,4 @@
-# 1.2: Simple String formatting
+# Simple String formatting
 
 Write a program to print five of your favourite movies along with 2 main actors in each. For example:
 

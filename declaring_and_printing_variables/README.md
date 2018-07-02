@@ -1,4 +1,4 @@
-# 1.1 Declaring and printing variables
+# Declaring and printing variables
 
 Write a program that declares variables to store the following values: 
 - highest temperature in June in New York is <a href="https://www.codecogs.com/eqnedit.php?latex=79^{\circ}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?79^{\circ}" title="79^{\circ}" /></a>F, 

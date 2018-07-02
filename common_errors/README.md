@@ -1,5 +1,5 @@
 
-# 1.15 Common Errors
+# Common Errors
 
 Consider the following program:
     

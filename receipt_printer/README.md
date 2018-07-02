@@ -1,4 +1,4 @@
-# 1.13 Receipt printer
+# Receipt printer
 
 Write a program that with just a single print statement prints the following statement on screen:
 

@@ -1,4 +1,4 @@
-# 1.5 Smallest change maker
+# Smallest change maker
 
 Consider the following program. It demonstrates how the user may be prompted for a value and how that value may be read into a variable.
 
@@ -31,4 +31,8 @@ public class ReadValues {
 }
 ```
 
-Using this program as a starting point, write a program that asks the user for an amount of money in dollars and cents then  print out the smallest number of bills and coins to make that amount.
+Using this program as a starting point, write a program that asks the user for an amount of money in dollars and cents then print out the smallest number of bills and coins to make that amount.
+
+## Solution
+
+The solution uses the integer arithmetic operators of modulus (%) and division (/). Given 37 cents for instance, you can calculate the number of quarters using 37 / 25 = 1. Note that with integer division the fractional part of the answer is truncated. To find the amount of cents left after you take out the quarters use 37 % 25 = 12. That is, 37 divided by 25 leaves a remainder of 12.

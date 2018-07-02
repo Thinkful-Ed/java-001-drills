@@ -1,4 +1,4 @@
-# 1.9 As the crow flies
+# As the crow flies
 
 Consider the following program. It demonstrates how the user may be prompted for a value and how that value may be read into a variable.
 
@@ -31,8 +31,7 @@ public class ReadValues {
 }
 ```
 
-Using this program as a starting point, w
-rite a program that uses the [Haversine Algorithm](https://www.movable-type.co.uk/scripts/latlong.html) to calculate the distance between two points on the surface of the Earth. The algorithm takes as inputs the GPS coordinates of the two points and uses the following formula to calculate distance:
+Using this program as a starting point, write a program that uses the [Haversine Algorithm](https://www.movable-type.co.uk/scripts/latlong.html) to calculate the distance between two points on the surface of the Earth. The algorithm takes as inputs the GPS coordinates of the two points and uses the following formula to calculate distance:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=a&space;=&space;sin(\frac{\Delta\phi}{2})^2&space;&plus;&space;cos(\phi_1)&space;*&space;cos(\phi_2)&space;*&space;sin(\frac{\Delta\lambda}{2})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a&space;=&space;sin(\frac{\Delta\phi}{2})^2&space;&plus;&space;cos(\phi_1)&space;*&space;cos(\phi_2)&space;*&space;sin(\frac{\Delta\lambda}{2})^2" title="a = sin(\frac{\Delta\phi}{2})^2 + cos(\phi_1) * cos(\phi_2) * sin(\frac{\Delta\lambda}{2})^2" /></a> 
 

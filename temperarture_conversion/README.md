@@ -1,4 +1,4 @@
-# Salary calculator
+# Temperature conversion
 
 Consider the following program. It demonstrates how the user may be prompted for a value and how that value may be read into a variable.
 
@@ -31,4 +31,4 @@ public class ReadValues {
 }
 ```
 
-Using this program as a starting point, write a program that prompts the user for the hourly rate and the total number of hours worked in a week then calculates the weekly salary.
+Using this program as a starting point, write a program that prompts the user for a Celsius temperature and converts it to Fahrenheit

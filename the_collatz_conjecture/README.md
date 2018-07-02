@@ -1,4 +1,4 @@
-# 2.5 The collatz conjecture
+# The collatz conjecture
 
 Consider a sequence of numbers determined as follows: start with any positive integer `n`, if `n` is even then the next term is `n/2`, and if `n` is odd the next term is `3n + 1`.  
 

@@ -1,4 +1,4 @@
-# 1.7 How fast to travel
+# How fast to travel
 
 Consider the following program. It demonstrates how the user may be prompted for a value and how that value may be read into a variable.
 

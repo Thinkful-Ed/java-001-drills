@@ -1,4 +1,4 @@
-# 1.12 Moon walker
+# Moon walker
 
 Write a program that prompts for the user’s weight in pounds, then using the force of gravity formula 
 

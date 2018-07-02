@@ -1,4 +1,4 @@
-# 3.5 String helper
+# String helper
 
 Consider the following class design: 
 
