@@ -1,4 +1,4 @@
-# 2.12 Debug the odd summer
+# Debug the odd summer
 
 Consider the following program written by a novice programmer:
 

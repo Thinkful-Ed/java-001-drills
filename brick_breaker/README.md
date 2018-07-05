@@ -1,4 +1,4 @@
-# 3.4 Brick breaker
+# Brick breaker
 
 Consider the following scenario: 
 You have been asked to build a version of the famous Brick Breaker game. Here is a link to one example on the Google Play store: https://play.google.com/store/apps/details?id=com.lt.latte.brick, or search the app store for similar games. The game consist of a set of bricks forming a wall at the top of the screen. The player possesses a ball and a paddle. The paddle moves horizontally across the bottom of the screen. The player bounces the ball on the paddle by positioning the paddle in the path of the ball and attempts to hit the bricks with the ball. When a brick is hit it disappears from the screen. Some bricks are special and give the player extra points or extra chances (lives). Play ends when all the bricks are broken or the player misses the ball. The player may have three chances initially.
